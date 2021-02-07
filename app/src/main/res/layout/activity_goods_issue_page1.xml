@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoodsIssuePage1Activity">
+
+    // アイコンバー
+    <LinearLayout
+        android:id="@+id/llGoodsIssuePage1Header"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        android:background="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        // アプリ終了
+        <ImageButton
+            android:id="@+id/btnExit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_logout_48"
+            android:onClick="btnExit_Click"
+            />
+
+        // ログイン情報
+        <TextView
+            android:id="@+id/txtLoginInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/transparent"
+            />
+
+        // 伝票追加
+        <ImageButton
+            android:id="@+id/btnSlipAdd"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_add_48"
+            android:onClick="btnSlipAdd_Click"
+            />
+
+    </LinearLayout>
+
+    // 進行状況
+    <TextView
+        android:id="@+id/txtProgressPhase1"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:text="出庫状１"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/llGoodsIssuePage1Header"
+        />
+
+    // ガイダンス
+    <TextView
+        android:id="@+id/txtGoodsIssuePage1Guidance"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtProgressPhase1"
+        android:text="@string/text_0"
+        android:textSize="16sp"
+        android:gravity="center"
+        />
+
+    // 伝票一覧（タイトル）
+    <TextView
+        android:id="@+id/txtGoodsIssuePage1ProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGoodsIssuePage1Guidance"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="@color/blue"
+        android:textSize="16sp"
+        android:text="伝票一覧"
+        />
+
+
+
+
+    // 進行ボタン
+    <Button
+        android:id="@+id/btnProgressChange"
+        android:text="開始"
+        android:textSize="32sp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="btnStart_Click"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

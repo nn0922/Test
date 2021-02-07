@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_0"><big>伝票を選択してください。</big></string>
+    <string name="text_1"><big>出庫指示してください。</big>\n<small>（QRをスキャンしてください。）</small></string>
+    <string name="text_2"><big>出庫完了してください。</big>\n<small>（QRをスキャンしてください。）</small></string>
+    <string name="text_3"><big>出庫指示してください。</big>\n<small>（QRをスキャンしてください。）</small></string>
+</resources>

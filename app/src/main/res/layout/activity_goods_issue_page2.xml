@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GoodsIssuePage2Activity">
+
+    // ヘッダアイコンバー
+    <LinearLayout
+        android:id="@+id/llGoodsIssuePage2Header"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/llGoodsIssuePage2Progress"
+        android:background="@color/black">
+
+        // 前伝票
+        <ImageButton
+            android:id="@+id/btnPreviousSlip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_left_48"
+            android:onClick="btnPreviousSlip_Click"
+            />
+
+        // 伝票情報
+        <TextView
+            android:id="@+id/txtSlipInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/transparent"
+            />
+
+        // 次伝票
+        <ImageButton
+            android:id="@+id/btnNextSlip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:background="@color/transparent"
+            android:src="@drawable/icon_right_48"
+            android:onClick="btnNextSlip_Click"
+            />
+
+    </LinearLayout>
+
+    // 進行状況
+    <LinearLayout
+        android:id="@+id/llGoodsIssuePage2Progress"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/llGoodsIssuePage2Header"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/txtProgressPhase2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="出庫状２"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txtProgressPartition1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:text=">"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txtProgressPhase3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:text="出庫状３"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txtProgressPartition2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"
+            android:text=">"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/txtProgressPhase4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:background="@color/red"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:text="出庫状４"
+            android:textSize="16sp"
+            />
+
+    </LinearLayout>
+
+    // ガイダンス
+    <TextView
+        android:id="@+id/txtGoodsIssuePage2Guidance"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@+id/llGoodsIssuePage2Progress"
+        app:layout_constraintBottom_toTopOf="@+id/txtGoodsIssuePage2ProductDetail"
+        android:textSize="16sp"
+        android:gravity="center"
+        />
+
+    // 出庫品詳細（タイトル）
+    <TextView
+        android:id="@id/txtGoodsIssuePage2ProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGoodsIssuePage2Guidance"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="@color/blue"
+        android:textSize="16sp"
+        android:text="出庫品詳細"
+        />
+
+    // 出庫品詳細（行）
+    <ListView
+        android:id="@+id/lvGoodsIssuePage2ProductDetail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGoodsIssuePage2ProductDetail"
+        app:layout_constraintBottom_toTopOf="@+id/btnProgressChange"
+        >
+
+    </ListView>
+
+    // 進行ボタン
+    <Button
+        android:id="@+id/btnProceed"
+        android:textSize="32sp"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:onClick="btnProceed_Click"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
